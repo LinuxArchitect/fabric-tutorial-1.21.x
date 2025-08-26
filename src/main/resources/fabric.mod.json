@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "This is the tutorial mod from Modding by Kaupenjoe",
+	"authors": [
+		"George Boyce"
+	],
+	"contact": {
+		"homepage": "https://georgeboyce.me/",
+		"sources": "https://github.com/LinuxArchitect/fabric-tutorial-1.21.x"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.georgeboyce.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"me.georgeboyce.tutorialmod.TutorialModDataGenerator"
+		],
+        "client": [
+            "me.georgeboyce.tutorialmod.TutorialModClient"
+        ]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
